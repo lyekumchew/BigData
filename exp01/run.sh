@@ -8,10 +8,12 @@ if [ $# != 1 ]; then
   exit 1
 fi
 
-INPUT_FILE_PATH="${1}.txt"
-OUTPUT_PATH="${1}_result"
-OUTPUT_PATH_2="${1}_result_2"
-OUTPUT_PATH_3="${1}_result_3"
+file_name=${1%.*}
+
+INPUT_FILE_PATH="/exp01/${1}"
+OUTPUT_PATH="/exp01/${file_name}_result"
+OUTPUT_PATH_2="/exp01/${file_name}_result_2"
+OUTPUT_PATH_3="/exp01/${file_name}_result_3"
 
 hadoop dfs -rmr "$OUTPUT_PATH"
 
