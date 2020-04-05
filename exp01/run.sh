@@ -38,7 +38,7 @@ hadoop jar $STREAM_JAR_PATH \
 hadoop dfs -rmr "$OUTPUT_PATH_3"
 
 hadoop jar $STREAM_JAR_PATH \
-  -input "$OUTPUT_PATH" \
+  -input "$OUTPUT_PATH_2" \
   -output "$OUTPUT_PATH_3" \
   -mapper "python3 map_3.py" \
   -reducer "python3 reduce_3.py" \
